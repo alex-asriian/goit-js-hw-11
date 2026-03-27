@@ -33,9 +33,11 @@ form.addEventListener('submit', (e) => {
             }
 
     
-e.currentTarget.reset();
+e.target.reset();
         })
         .catch(error => {
+            console.log(error);
+            
             hideLoader();
             iziToast.error({
                 message: 'Something went wrong. Please try again later.',
