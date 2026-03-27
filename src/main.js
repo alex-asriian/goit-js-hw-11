@@ -13,7 +13,10 @@ form.addEventListener('submit', (e) => {
     e.preventDefault();
     const searchValue = e.currentTarget.elements['search-text'].value.trim();
     if (!searchValue) {
-        alert('enter the text');
+       iziToast.warning({
+        message: 'Please fill the search field',
+        position: 'topRight',
+    });
         return;
     }
     clearGallery(); 
