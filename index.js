@@ -4,10 +4,10 @@ import{a as p,S as d,i as n}from"./assets/vendor-CqrTLJHR.js";(function(){const 
                     <img class="gallery-image" src="${o}" alt="${e}" />
                 </a>
                 <div class="info">
-                    <p class="info-item"><b>Likes</b>${t}</p>
-                    <p class="info-item"><b>Views</b>${a}</p>
-                    <p class="info-item"><b>Comments</b>${f}</p>
-                    <p class="info-item"><b>Downloads</b>${m}</p>
+                    <p class="info-item"><b>Likes</b> ${t}</p>
+                    <p class="info-item"><b>Views</b> ${a}</p>
+                    <p class="info-item"><b>Comments</b> ${f}</p>
+                    <p class="info-item"><b>Downloads</b> ${m}</p>
                 </div>
-            </li>`).join("");c.innerHTML=r,h.refresh()}function b(){c.innerHTML=""}function L(){u.classList.add("is-visible")}function l(){u.classList.remove("is-visible")}const v=document.querySelector(".form");v.addEventListener("submit",s=>{s.preventDefault();const r=s.currentTarget.elements["search-text"].value.trim();if(!r){alert("enter the text");return}b(),L(),g(r).then(o=>{if(l(),o.hits.length===0){n.error({message:"Sorry, there are no images matching your search query. Please try again!",position:"topRight"});return}else y(o.hits);s.target.reset()}).catch(o=>{console.log(o),l(),n.error({message:"Something went wrong. Please try again later.",position:"topRight"})})});
+            </li>`).join("");c.innerHTML=r,h.refresh()}function b(){c.innerHTML=""}function L(){u.classList.add("is-visible")}function l(){u.classList.remove("is-visible")}const v=document.querySelector(".form");v.addEventListener("submit",s=>{s.preventDefault();const r=s.currentTarget.elements["search-text"].value.trim();if(!r){n.warning({message:"Please fill the search field",position:"topRight"});return}b(),L(),g(r).then(o=>{if(l(),o.hits.length===0){n.error({message:"Sorry, there are no images matching your search query. Please try again!",position:"topRight"});return}else y(o.hits);s.target.reset()}).catch(o=>{console.log(o),l(),n.error({message:"Something went wrong. Please try again later.",position:"topRight"})})});
 //# sourceMappingURL=index.js.map
